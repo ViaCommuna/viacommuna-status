@@ -18,7 +18,7 @@ sites:
     headers:
       # Publishable anon key (already shipped in the app bundle), stored as a
       # repository secret so it isn't committed.
-      - "apikey: $SECRET_SUPABASE_ANON_KEY"
+      - "apikey: $SUPABASE_ANON_KEY"
 
 status-website:
   # Served at https://viacommuna.github.io/viacommuna-status until a
