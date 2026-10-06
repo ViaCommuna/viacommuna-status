@@ -1,31 +1,53 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Upptime config for the public status page (repo: ViaCommuna/viacommuna-status).
+# Copy to .upptimerc.yml in that repo. Upptime runs on GitHub Actions and
+# publishes to GitHub Pages: open source (MIT), no server, free for public repos.
+owner: ViaCommuna
+repo: viacommuna-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://www.viacommuna.com
+  - name: Admin-Dashboard
+    url: https://admin.viacommuna.com
+    # The root redirects to /login (307); count that as up.
+    expectedStatusCodes:
+      - 200
+      - 307
+  - name: API & Login (Supabase)
+    url: https://hdooeficjgsfqiyatess.supabase.co/auth/v1/health
+    headers:
+      # Publishable anon key (already shipped in the app bundle), stored as a
+      # repository secret so it isn't committed.
+      - "apikey: $SECRET_SUPABASE_ANON_KEY"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Served at https://viacommuna.github.io/viacommuna-status until a
+  # status.viacommuna.com CNAME is set up.
+  baseUrl: /viacommuna-status
+  name: Via Communa Status
+  introTitle: "Via Communa – Systemstatus"
+  introMessage: Aktuelle Verfügbarkeit und Störungen der Via Communa App und des Admin-Dashboards.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Aktive Störungen
+  allSystemsOperational: Alle Systeme funktionieren
+  incidentReport: "Störungsbericht #$NUMBER →"
+  pastIncidents: Vergangene Störungen
+  pastIncidentsResolved: "Behoben in $MINUTES Minuten mit $POSTS Updates"
+  up: Verfügbar
+  down: Ausfall
+  degraded: Eingeschränkt
+
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  responseTime: "0 23 * * *"
+  graphs: "0 0 * * *"
+  summary: "0 0 * * *"
+  staticSite: "0 1 * * *"
+  updates: "0 3 * * 0"
+  updateTemplate: "0 0 * * *"
