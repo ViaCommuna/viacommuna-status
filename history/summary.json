@@ -40,21 +40,22 @@
     "url": "https://hdooeficjgsfqiyatess.supabase.co/auth/v1/health",
     "icon": "https://icons.duckduckgo.com/ip3/hdooeficjgsfqiyatess.supabase.co.ico",
     "slug": "api-and-login-supabase",
-    "status": "down",
-    "uptime": "95.34%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "95.34%",
-    "uptimeMonth": "95.34%",
-    "uptimeYear": "95.34%",
-    "time": 968,
-    "timeDay": 2864,
-    "timeWeek": 968,
-    "timeMonth": 968,
-    "timeYear": 968,
+    "status": "up",
+    "uptime": "90.77%",
+    "uptimeDay": "85.00%",
+    "uptimeWeek": "90.77%",
+    "uptimeMonth": "90.77%",
+    "uptimeYear": "90.77%",
+    "time": 1402,
+    "timeDay": 3389,
+    "timeWeek": 1402,
+    "timeMonth": 1402,
+    "timeYear": 1402,
     "dailyMinutesDown": {
       "2026-10-07": 46,
       "2026-10-06": 154,
-      "2026-10-09": 0
+      "2026-10-10": 27,
+      "2026-10-09": 189
     }
   }
 ]
