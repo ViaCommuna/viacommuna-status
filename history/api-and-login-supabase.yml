@@ -1,7 +1,7 @@
 url: https://hdooeficjgsfqiyatess.supabase.co/auth/v1/health
-status: down
-code: 504
-responseTime: 5346
-lastUpdated: 2026-10-09T20:50:43.451Z
+status: up
+code: 200
+responseTime: 4438
+lastUpdated: 2026-10-10T00:26:40.536Z
 startTime: 2026-10-06T21:26:16.881Z
 generator: Upptime <https://github.com/upptime/upptime>
