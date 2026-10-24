@@ -4,6 +4,12 @@
 owner: ViaCommuna
 repo: viacommuna-status
 
+# Every incident issue is assigned to these GitHub users, so GitHub notifies
+# them by email when a monitored system goes down (ISMS: MON-01, NC-2026-04).
+assignees:
+  - cytadros
+  - JonnysCode
+
 sites:
   - name: Website
     url: https://www.viacommuna.com
